@@ -15,6 +15,12 @@ Metadata layers are brought in as git submodules:
 | meta-openembedded     | master         | OpenEmbedded layers                                 |
 | meta-virtualization   | master         | Virtualization layer for docker support             |
 
+git submodule add  -b master --name repos/meta-ros --force https://github.com/ros/meta-ros.git repos/meta-ros
+git submodule add  -b master --name repos/meta-python2 --force https://github.com/YoeDistro/meta-python2.git repos/meta-python2
+cd layers/
+ln -s ../repos/meta-ros ../layers/meta-ros
+ln -s ../repos/meta-python2 ../layers/meta-python2
+
 ## Prerequisites
 
 See the [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
